@@ -1,0 +1,282 @@
+/**
+* Core CSS stylesheet for Authorize.Net.
+*
+* Copyright: © 2009-2011
+* {@link http://www.websharks-inc.com/ WebSharks, Inc.}
+* (coded in the USA)
+*
+* This WordPress plugin (s2Member Pro) is comprised of two parts:
+*
+* o (1) Its PHP code is licensed under the GPL license, as is WordPress.
+* 	You should have received a copy of the GNU General Public License,
+* 	along with this software. In the main directory, see: /licensing/
+* 	If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* o (2) All other parts of (s2Member Pro); including, but not limited to:
+* 	the CSS code, some JavaScript code, images, and design;
+* 	are licensed according to the license purchased.
+* 	See: {@link http://www.s2member.com/prices/}
+*
+* Unless you have our prior written consent, you must NOT directly or indirectly license,
+* sub-license, sell, resell, or provide for free; part (2) of the s2Member Pro Add-on;
+* or make an offer to do any of these things. All of these things are strictly
+* prohibited with part (2) of the s2Member Pro Add-on.
+*
+* Your purchase of s2Member Pro includes free lifetime upgrades via s2Member.com
+* (i.e., new features, bug fixes, updates, improvements); along with full access
+* to our video tutorial library: {@link http://www.s2member.com/videos/}
+*
+* @package s2Member\AuthNet
+* @since 1.5
+*/
+/*
+Structrual styles for Authorize.Net Pro-Forms.
+
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+form.s2member-pro-authnet-form
+{
+	margin     : 0;
+	padding    : 0;
+	clear      : both;
+	display    : block;
+	text-align : left;
+}
+div.s2member-pro-authnet-form-section
+{
+	text-align : left;
+	margin     : 25px 0 0 0;
+}
+div.s2member-pro-authnet-form-section:first-child
+{
+	margin-top : 0;
+}
+div.s2member-pro-authnet-form-options-section,
+div.s2member-pro-authnet-registration-form-description-section,
+div.s2member-pro-authnet-checkout-form-description-section,
+div.s2member-pro-authnet-sp-checkout-form-description-section,
+div.s2member-pro-authnet-form-coupon-section
+{
+	display : none;
+}
+div.s2member-pro-authnet-form-response-section
+{
+	margin-top : 0;
+}
+div.s2member-pro-authnet-form-response-info,
+div.s2member-pro-authnet-form-response-error
+{
+	border-radius : 5px;
+	color         : #000000;
+	padding       : 10px 60px 10px 10px;
+}
+div.s2member-pro-authnet-form-response-info a,
+div.s2member-pro-authnet-form-response-error a
+{
+	color           : #000000;
+	text-decoration : underline;
+}
+div.s2member-pro-authnet-form-response-info
+{
+	font-size  : 120%;
+	border     : 1px solid #F1EADA;
+	background : #FFFFCC url('<?php echo $i; ?>/info-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-response-error
+{
+	border     : 1px solid #FE8989;
+	background : #FFD5D5 url('<?php echo $i; ?>/error-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-description-div
+{
+	font-size   : 140%;
+	font-family : 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+}
+div.s2member-pro-authnet-form-section-title
+{
+	font-size    : 150%;
+	text-align   : left;
+	min-height   : 22px;
+	margin       : 0 0 25px 0;
+	border       : 1px solid;
+	padding      : 10px 0 10px 0;
+	border-width : 0 0 1px 0;
+	font-family  : 'Domine', 'Georgia', serif;
+}
+div.s2member-pro-authnet-form-coupon-div > label > span::before
+{
+	vertical-align : middle;
+	margin         : 0 5px 0 0;
+	display        : inline-block;
+	content        : url('<?php echo $i; ?>/coupon-icon.png');
+}
+div.s2member-pro-authnet-form-registration-section-title
+{
+	background : url('<?php echo $i; ?>/secure-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-custom-fields-section-title
+{
+	background : url('<?php echo $i; ?>/details-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-billing-method-section-title
+{
+	background : url('<?php echo $i; ?>/wallet-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-billing-address-section-title
+{
+	background : url('<?php echo $i; ?>/address-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-captcha-section-title
+{
+	background : url('<?php echo $i; ?>/captcha-icon.png') no-repeat center right;
+}
+label.s2member-pro-authnet-form-card-type-label
+{
+	width      : 25%;
+	cursor     : pointer;
+	text-align : center;
+	display    : inline-block;
+}
+label.s2member-pro-authnet-form-card-type-label.disabled
+{
+	opacity : 0.2;
+	filter  : alpha(opacity=20);
+}
+label.s2member-pro-authnet-form-card-type-label input[type="radio"]
+{
+	margin-top : 40px !important;
+}
+label.s2member-pro-authnet-form-card-type-visa-label
+{
+	background : url('<?php echo $i; ?>/visa-card.png') no-repeat top center;
+}
+label.s2member-pro-authnet-form-card-type-mastercard-label
+{
+	background : url('<?php echo $i; ?>/mastercard-card.png') no-repeat top center;
+}
+label.s2member-pro-authnet-form-card-type-amex-label
+{
+	background : url('<?php echo $i; ?>/amex-card.png') no-repeat top center;
+}
+label.s2member-pro-authnet-form-card-type-discover-label
+{
+	background : url('<?php echo $i; ?>/discover-card.png') no-repeat top center;
+}
+div.s2member-pro-authnet-form-submission-section-title
+{
+	margin-bottom : 0;
+	background    : url('<?php echo $i; ?>/arrow-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div
+{
+	text-align : left;
+	margin     : 15px 0 0 0;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input[type="text"],
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input[type="email"],
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input[type="password"],
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div textarea,
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div select
+{
+	margin     : 0;
+	padding    : 5px;
+	width      : 100%;
+	box-sizing : border-box;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input[type="checkbox"],
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input[type="radio"]
+{
+	margin         : 0 3px 0 0;
+	vertical-align : middle;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div label
+{
+	display     : inline;
+	cursor      : pointer;
+	font-weight : normal;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div label.s2member-pro-authnet-form-card-type-label
+{
+	display : inline-block;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div select.s2member-pro-authnet-card-expiration-month,
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div select.s2member-pro-authnet-card-expiration-year
+{
+	width   : 50%;
+	float   : left;
+	display : inline-block;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div select.s2member-pro-authnet-card-expiration-year
+{
+	width   : 49%;
+	float   : right;
+	display : inline-block;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div label.ws-plugin--s2member-custom-reg-field-op-l
+{
+	opacity        : 0.7;
+	font-size      : 90%;
+	vertical-align : middle;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-custom-reg-field-divider-section
+{
+	height       : 1px;
+	border       : 0 solid;
+	line-height  : 1px;
+	border-width : 0 0 1px 0;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-custom-reg-field-divider-section-title
+{
+	border       : 0 solid;
+	font-size    : 110%;
+	border-width : 0 0 1px 0;
+	padding      : 0 0 12px 0;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-coupon-div input[type="text"]
+{
+	margin         : 0;
+	width          : 74%;
+	vertical-align : middle;
+	display        : inline;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-coupon-div input[type="button"]
+{
+	margin         : 0;
+	width          : 25%;
+	float          : right;
+	vertical-align : middle;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-ajax-tax-div > div,
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-coupon-response-div > div
+{
+	color                 : #446F5C;
+	-moz-border-radius    : 5px;
+	-webkit-border-radius : 5px;
+	border-radius         : 5px;
+	padding               : 5px 60px 5px 5px;
+	border                : 1px solid #A9D6B6;
+	background            : #CCEED9 url('<?php echo $i; ?>/tax-icon.png') no-repeat center right;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-ajax-tax-div > div > img
+{
+	border         : 0;
+	width          : 16px;
+	height         : 16px;
+	margin         : 0 5px 0 0;
+	background     : transparent;
+	vertical-align : middle;
+}
+div.s2member-pro-authnet-form-section > div.s2member-pro-authnet-form-div input.s2member-pro-authnet-password2
+{
+	margin-top : 5px;
+}
+div.s2member-pro-authnet-form-submission-section > div.s2member-pro-authnet-form-custom-reg-field-opt-in-div
+{
+	float     : left;
+	max-width : 70%;
+}
+div.s2member-pro-authnet-form-submission-section > div.s2member-pro-authnet-form-submit-div
+{
+	float : right;
+}

@@ -1,0 +1,6 @@
+<?php
+if (s2member_pro_paypal_s2p_v_query_ok ($_SERVER["QUERY_STRING"]))
+	{
+		echo 'Looks good. Verified in the first 10 seconds.';
+	}
+?>

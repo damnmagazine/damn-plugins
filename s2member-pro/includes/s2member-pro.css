@@ -1,0 +1,262 @@
+/**
+* Core CSS stylesheet for s2Member Pro
+*
+* Copyright: © 2009-2011
+* {@link http://www.websharks-inc.com/ WebSharks, Inc.}
+* (coded in the USA)
+*
+* This WordPress plugin (s2Member Pro) is comprised of two parts:
+*
+* o (1) Its PHP code is licensed under the GPL license, as is WordPress.
+* 	You should have received a copy of the GNU General Public License,
+* 	along with this software. In the main directory, see: /licensing/
+* 	If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* o (2) All other parts of (s2Member Pro); including, but not limited to:
+* 	the CSS code, some JavaScript code, images, and design;
+* 	are licensed according to the license purchased.
+* 	See: {@link http://www.s2member.com/prices/}
+*
+* Unless you have our prior written consent, you must NOT directly or indirectly license,
+* sub-license, sell, resell, or provide for free; part (2) of the s2Member Pro Add-on;
+* or make an offer to do any of these things. All of these things are strictly
+* prohibited with part (2) of the s2Member Pro Add-on.
+*
+* Your purchase of s2Member Pro includes free lifetime upgrades via s2Member.com
+* (i.e., new features, bug fixes, updates, improvements); along with full access
+* to our video tutorial library: {@link http://www.s2member.com/videos/}
+*
+* @package s2Member
+* @since 1.0
+*/
+/*
+Structural styles for s2Member Pro Login Widget.
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+div.ws-plugin--s2member-pro-login-widget > form input[type = "text"],
+div.ws-plugin--s2member-pro-login-widget > form input[type = "email"],
+div.ws-plugin--s2member-pro-login-widget > form input[type = "password"],
+div.ws-plugin--s2member-pro-login-widget > form input[type = "submit"],
+div.ws-plugin--s2member-pro-login-widget > form textarea,
+div.ws-plugin--s2member-pro-login-widget > form select
+{
+	width      : 100%;
+	box-sizing : border-box;
+}
+div.ws-plugin--s2member-pro-login-widget > form input[type = "checkbox"],
+div.ws-plugin--s2member-pro-login-widget > form input[type = "radio"]
+{
+	margin         : 0 3px 0 0;
+	vertical-align : middle;
+}
+div.ws-plugin--s2member-pro-login-widget-lost-password > a
+{
+	font-size  : 90%;
+	text-align : right;
+}
+div.ws-plugin--s2member-pro-login-widget-username,
+div.ws-plugin--s2member-pro-login-widget-password,
+div.ws-plugin--s2member-pro-login-widget-remember-me,
+div.ws-plugin--s2member-pro-login-widget-submit
+{
+	margin : 10px 0 0 0;
+}
+div.ws-plugin--s2member-pro-login-widget-profile-summary > a > img.avatar
+{
+	float                 : right;
+	padding               : 3px;
+	margin                : 0 0 0 15px;
+	border                : 1px solid #CCCCCC;
+	-moz-border-radius    : 4px;
+	-webkit-border-radius : 4px;
+	border-radius         : 4px;
+}
+div.ws-plugin--s2member-pro-login-widget-profile-summary-name
+{
+	font-size   : 120%;
+	font-weight : bold;
+}
+/*
+Structural styles for the `[s2Member-Gift-Codes /]` shortcode.
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+table.ws-plugin--s2member-gift-codes > thead > tr > th
+{
+	vertical-align : middle;
+}
+table.ws-plugin--s2member-gift-codes > thead > tr > th.-code::before
+{
+	vertical-align : middle;
+	margin         : 0 .25em 0 0;
+	display        : inline-block;
+	content        : url('<?php echo $i; ?>/coupon-icon.png');
+}
+table.ws-plugin--s2member-gift-codes > tbody > tr > td.-code
+{
+	font-family : 'Menlo', 'Monaco', 'Consolas', monospace;
+}
+table.ws-plugin--s2member-gift-codes > tbody > tr > td.-code > a
+{
+	border          : 0;
+	text-decoration : none;
+}
+table.ws-plugin--s2member-gift-codes > tbody > tr > td.-status
+{
+	font-variant : small-caps;
+}
+/*
+Structural styles for the `[s2Member-List /]` shortcode.
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+div.ws-plugin--s2member-list,
+div.ws-plugin--s2member-list *
+{
+	margin  : 0;
+	padding : 0;
+	border  : 0;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-users,
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-users li
+{
+	list-style : none;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-users li:not(:first-child)
+{
+	margin-top : 25px;
+}
+div.ws-plugin--s2member-list div.ws-plugin--s2member-list-user-avatar
+{
+	float  : left;
+	margin : 0 25px 0 5px;
+}
+div.ws-plugin--s2member-list div.ws-plugin--s2member-list-user-avatar a
+{
+	opacity : 0.8;
+}
+div.ws-plugin--s2member-list div.ws-plugin--s2member-list-user-avatar a:hover
+{
+	opacity : 1;
+}
+div.ws-plugin--s2member-list div.ws-plugin--s2member-list-user-avatar img
+{
+	border-radius : 5px 5px 0 0;
+}
+div.ws-plugin--s2member-list div.ws-plugin--s2member-list-user-display-name
+{
+	padding : 10px 0 0 0;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields,
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr > td
+{
+	box-sizing : border-box;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields
+{
+	width           : 100%;
+	table-layout    : fixed;
+	border          : 1px solid rgba(0, 0, 0, 0.1);
+	border-width    : 1px 0 0 1px;
+	border-radius   : 5px 5px 0 0;
+	border-collapse : separate;
+	border-spacing  : 1px;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr:first-child > td:first-child
+{
+	border-radius : 5px 0 0 0;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr:first-child > td:last-child
+{
+	border-radius : 0 5px 0 0;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr > td,
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr > td:hover
+{
+	width         : 50%;
+	max-width     : 50%;
+	text-overflow : ellipsis;
+	overflow      : hidden;
+	white-space   : nowrap;
+	padding       : 8px;
+
+	color         : #222222;
+	background    : #EEEEEE;
+
+	border        : 1px solid rgba(0, 0, 0, 0.1);
+	border-width  : 0 1px 1px 0;
+}
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr:nth-child(even) > td,
+div.ws-plugin--s2member-list table.ws-plugin--s2member-list-user-fields > tbody > tr:nth-child(even) > td:hover
+{
+	color      : #2F2F2F;
+	background : #DFDFDF;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination
+{
+	margin-top : 25px;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination,
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination li
+{
+	list-style : none;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination li
+{
+	display : inline-block;
+	margin  : 0 5px 0 5px;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination li a
+{
+	line-height     : 1;
+	opacity         : 0.5;
+	text-decoration : none;
+	border-radius   : .25em;
+	border          : 1px solid;
+	padding         : .25em .5em;
+	display         : inline-block;
+}
+div.ws-plugin--s2member-list ul.ws-plugin--s2member-list-pagination li a:hover
+{
+	opacity : 1;
+}
+/*
+Structural styles for the `[s2Member-List-Search /]` shortcode.
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+div.ws-plugin--s2member-list-search-box,
+div.ws-plugin--s2member-list-search-box *
+{
+	margin     : 0;
+	box-sizing : border-box;
+}
+div.ws-plugin--s2member-list-search-box table,
+div.ws-plugin--s2member-list-search-box table > tbody,
+div.ws-plugin--s2member-list-search-box table > tbody > tr,
+div.ws-plugin--s2member-list-search-box table > tbody > tr > td
+{
+	padding : 0;
+	border  : 0;
+	width   : 100%;
+}
+div.ws-plugin--s2member-list-search-box table > tbody > tr > td:first-child
+{
+	width          : 78%;
+	padding-right  : 2%;
+	text-align     : left;
+	vertical-align : middle;
+}
+div.ws-plugin--s2member-list-search-box table > tbody > tr > td:last-child
+{
+	width          : 20%;
+	text-align     : right;
+	vertical-align : middle;
+}
+div.ws-plugin--s2member-list-search-box table > tbody > tr > td:first-child > input,
+div.ws-plugin--s2member-list-search-box table > tbody > tr > td:last-child > button
+{
+	width : 100%;
+}

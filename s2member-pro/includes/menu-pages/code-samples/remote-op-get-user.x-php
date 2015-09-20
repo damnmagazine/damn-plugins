@@ -1,0 +1,21 @@
+<?php
+$op["op"] = "get_user"; // The Remote Operation.
+
+$op["api_key"] = "[API Key]"; // Check your Dashboard for this value.
+	// See: `s2Member → API / Scripting → Remote Operations API → API Key`
+
+$op["data"] = array(
+	"user_id" => "123", // A User ID to query the database for.
+	"user_login" => "johndoe22", // OR, a Username to query the database for.
+	"user_email" => "johndoe22@example.com" // OR, an email address to query the database for.
+);
+
+$post_data = stream_context_create (array("http" => array("method" => "POST", "header" => "Content-type: application/x-www-form-urlencoded", "content" => "s2member_pro_remote_op=" . urlencode (serialize ($op)))));
+
+$result = trim (file_get_contents ("http://www.example.com/?s2member_pro_remote_op=1", false, $post_data));
+
+if (!empty($result) && !preg_match ("/^Error\:/i", $result) && is_array($user = @unserialize ($result)))
+	print_r($user); // Print full unserialized array with all User data properties.
+else
+	echo "API error reads: " . $result;
+?>

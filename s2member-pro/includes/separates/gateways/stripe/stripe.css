@@ -1,0 +1,294 @@
+/**
+* Core CSS stylesheet for Stripe.
+*
+* Copyright: © 2009-2011
+* {@link http://www.websharks-inc.com/ WebSharks, Inc.}
+* (coded in the USA)
+*
+* This WordPress plugin (s2Member Pro) is comprised of two parts:
+*
+* o (1) Its PHP code is licensed under the GPL license, as is WordPress.
+* 	You should have received a copy of the GNU General Public License,
+* 	along with this software. In the main directory, see: /licensing/
+* 	If not, see: {@link http://www.gnu.org/licenses/}.
+*
+* o (2) All other parts of (s2Member Pro); including, but not limited to:
+* 	the CSS code, some JavaScript code, images, and design;
+* 	are licensed according to the license purchased.
+* 	See: {@link http://www.s2member.com/prices/}
+*
+* Unless you have our prior written consent, you must NOT directly or indirectly license,
+* sub-license, sell, resell, or provide for free; part (2) of the s2Member Pro Add-on;
+* or make an offer to do any of these things. All of these things are strictly
+* prohibited with part (2) of the s2Member Pro Add-on.
+*
+* Your purchase of s2Member Pro includes free lifetime upgrades via s2Member.com
+* (i.e., new features, bug fixes, updates, improvements); along with full access
+* to our video tutorial library: {@link http://www.s2member.com/videos/}
+*
+* @package s2Member\Stripe
+* @since 140617
+*/
+/*
+Structrual styles for Stripe Pro-Forms.
+
+These are basic CSS rules. You can override any of these
+through the `/style.css` file for your WordPress theme.
+*/
+form.s2member-pro-stripe-form
+{
+	margin     : 0;
+	padding    : 0;
+	clear      : both;
+	display    : block;
+	text-align : left;
+}
+div.s2member-pro-stripe-form-section
+{
+	text-align : left;
+	margin     : 25px 0 0 0;
+}
+div.s2member-pro-stripe-form-section:first-child
+{
+	margin-top : 0;
+}
+div.s2member-pro-stripe-form-options-section,
+div.s2member-pro-stripe-registration-form-description-section,
+div.s2member-pro-stripe-checkout-form-description-section,
+div.s2member-pro-stripe-sp-checkout-form-description-section,
+div.s2member-pro-stripe-form-coupon-section
+{
+	display : none;
+}
+div.s2member-pro-stripe-form-response-section
+{
+	margin-top : 0;
+}
+div.s2member-pro-stripe-form-response-info,
+div.s2member-pro-stripe-form-response-error
+{
+	border-radius : 5px;
+	color         : #000000;
+	padding       : 10px 60px 10px 10px;
+}
+div.s2member-pro-stripe-form-response-info a,
+div.s2member-pro-stripe-form-response-error a
+{
+	color           : #000000;
+	text-decoration : underline;
+}
+div.s2member-pro-stripe-form-response-info
+{
+	font-size  : 120%;
+	border     : 1px solid #F1EADA;
+	background : #FFFFCC url('<?php echo $i; ?>/info-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-response-error
+{
+	border     : 1px solid #FE8989;
+	background : #FFD5D5 url('<?php echo $i; ?>/error-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-description-div
+{
+	font-size   : 140%;
+	font-family : 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+}
+div.s2member-pro-stripe-form-section-title
+{
+	font-size    : 150%;
+	text-align   : left;
+	min-height   : 22px;
+	margin       : 0 0 25px 0;
+	border       : 1px solid;
+	padding      : 10px 0 10px 0;
+	border-width : 0 0 1px 0;
+	font-family  : 'Domine', 'Georgia', serif;
+}
+div.s2member-pro-stripe-form-coupon-div > label > span::before
+{
+	vertical-align : middle;
+	margin         : 0 5px 0 0;
+	display        : inline-block;
+	content        : url('<?php echo $i; ?>/coupon-icon.png');
+}
+div.s2member-pro-stripe-form-registration-section-title
+{
+	background : url('<?php echo $i; ?>/secure-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-custom-fields-section-title
+{
+	background : url('<?php echo $i; ?>/details-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-billing-method-section-title
+{
+	background : url('<?php echo $i; ?>/wallet-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-billing-address-section-title
+{
+	background : url('<?php echo $i; ?>/address-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-captcha-section-title
+{
+	background : url('<?php echo $i; ?>/captcha-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-submission-section-title
+{
+	margin-bottom : 0;
+	background    : url('<?php echo $i; ?>/arrow-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div
+{
+	text-align : left;
+	margin     : 15px 0 0 0;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input[type="text"],
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input[type="email"],
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input[type="password"],
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div textarea,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div select
+{
+	margin     : 0;
+	padding    : 5px;
+	width      : 100%;
+	box-sizing : border-box;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input[type="checkbox"],
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input[type="radio"]
+{
+	margin         : 0 3px 0 0;
+	vertical-align : middle;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div label
+{
+	display     : inline;
+	cursor      : pointer;
+	font-weight : normal;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:hover,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:focus,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:active
+{
+	margin         : 0;
+	width          : 100%;
+	height         : 46px;
+	padding        : 10px;
+
+	line-height    : 26px;
+	text-align     : left;
+	vertical-align : middle;
+	box-sizing     : border-box;
+
+	border         : none;
+	box-shadow     : none;
+	text-shadow    : none;
+	outline        : none;
+	color          : inherit;
+	cursor         : pointer;
+	background     : rgba(0, 0, 0, 0.05);
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:before
+{
+	content    : '';
+	float      : right;
+	width      : 119px;
+	height     : 26px;
+	background : url('<?php echo $i; ?>/powered-by-stripe.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:focus,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:active
+{
+	opacity : 0.5;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button > i,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button > span
+{
+	opacity    : 0.8;
+	font-style : normal;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:hover > i,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button:hover > span
+{
+	opacity : 1;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div button.s2member-pro-stripe-form-source-token-button > span
+{
+	text-decoration : none;
+	border-bottom   : 1px dotted;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div div.s2member-pro-stripe-form-source-token-summary
+{
+	font-weight : bold;
+	text-align  : center;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div label.ws-plugin--s2member-custom-reg-field-op-l
+{
+	opacity        : 0.7;
+	font-size      : 90%;
+	vertical-align : middle;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-custom-reg-field-divider-section
+{
+	height       : 1px;
+	border       : 0 solid;
+	line-height  : 1px;
+	border-width : 0 0 1px 0;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-custom-reg-field-divider-section-title
+{
+	border       : 0 solid;
+	font-size    : 110%;
+	border-width : 0 0 1px 0;
+	padding      : 0 0 12px 0;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-coupon-div input[type="text"]
+{
+	margin         : 0;
+	width          : 74%;
+	vertical-align : middle;
+	display        : inline;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-coupon-div input[type="button"]
+{
+	margin         : 0;
+	width          : 25%;
+	float          : right;
+	vertical-align : middle;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-ajax-tax-div > div,
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-coupon-response-div > div
+{
+	color                 : #446F5C;
+	-moz-border-radius    : 5px;
+	-webkit-border-radius : 5px;
+	border-radius         : 5px;
+	padding               : 5px 60px 5px 5px;
+	border                : 1px solid #A9D6B6;
+	background            : #CCEED9 url('<?php echo $i; ?>/tax-icon.png') no-repeat center right;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-ajax-tax-div > div > img
+{
+	border         : 0;
+	width          : 16px;
+	height         : 16px;
+	margin         : 0 5px 0 0;
+	background     : transparent;
+	vertical-align : middle;
+}
+div.s2member-pro-stripe-form-section > div.s2member-pro-stripe-form-div input.s2member-pro-stripe-password2
+{
+	margin-top : 5px;
+}
+div.s2member-pro-stripe-form-submission-section > div.s2member-pro-stripe-form-custom-reg-field-opt-in-div
+{
+	float     : left;
+	max-width : 70%;
+}
+div.s2member-pro-stripe-form-submission-section > div.s2member-pro-stripe-form-submit-div
+{
+	float : right;
+}
+iframe.stripe_checkout_app
+{
+	z-index : 999999 !important;
+}

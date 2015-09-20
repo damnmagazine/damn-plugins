@@ -1,0 +1,73 @@
+<?php
+$op["op"] = "modify_user"; // The Remote Operation.
+
+$op["api_key"] = "[API Key]"; // Check your Dashboard for this value.
+	// See: `s2Member → API / Scripting → Remote Operations API → API Key`
+
+$op["data"] = array(
+	// You must supply one of these values.
+	"user_id" => "123", // A WordPress® User ID.
+	"user_login" => "johndoe22", // A Username instead of the WordPress® User ID.
+
+	// These additional details are 100% completely optional.
+
+	"user_email" => "johndoe22@example.com", // Optional—if updating. A valid/unique Email Address for this User.
+	"user_pass" => "456DkaIjsd!", // Optional. Plain text Password—if updating.
+
+	"first_name" => "John", // Optional—if updating. First Name for this User.
+	"last_name" => "Doe", // Optional—if updating. Last Name for this User.
+	"display_name" => "Doe", // Optional—if updating. Display Name for this User.
+
+	"s2member_level" => "2", // Optional —if updating.
+	"s2member_ccaps" => "music,videos", // Optional—if updating.
+	// Any Custom Capabilities you supply here will be added to any that a User already has.
+	// If you want to remove all Custom Capabilities, start your list with "-all". Ex: "-all,music,videos" (removes all, then adds: music,videos).
+	// If you simply want to remove all Custom Capabilities, set this to "-all" (removes all Custom Capabilities, adds none).
+
+	"s2member_originating_blog" => "123", // Optional—if updating a User/Member that exists in a Multisite Network installation.
+		// This should ONLY be supplied if you are running a Multisite Network, and you want to change the Originating Blog ID.
+
+	"s2member_registration_ip" => "123.456.789.100", // Optional—if updating. User's original IP Address during registration.
+
+	"s2member_subscr_gateway" => "paypal", // Optional—if updating. User's Paid Subscr. Gateway Code. One of: (paypal|alipay|authnet|ccbill|clickbank|google).
+	"s2member_subscr_id" => "I-DJASODJF8933J", // Optional—if updating. User's Paid Subscr. ID. For PayPal®, use their Subscription ID, or Recurring Profile ID.
+
+	"s2member_custom" => "www.example.com", // Optional—if updating. This should always start with your installation domain (i.e., $_SERVER["HTTP_HOST"]).
+
+	"s2member_auto_eot_time" => "2030-12-25", // Optional—if updating. Can be any value that PHP's ``strtotime()`` function will understand (i.e., YYYY-MM-DD).
+
+	"custom_fields" => array("my_field_id" => "Some value."), // Optional—if updating. An array of Custom Registration/Profile Field ID's, with associative values.
+
+	"s2member_notes" => "Modified this User via API call.", // Optional—if updating. A new administrative notation added to the User's account.
+
+	"reset_ip_restrictions" => "1", // Deletes/resets any existing IP Restrictions that s2Member has logged on this account.
+		// If the current User/Member is banned, because they've used too many IPs in the last X days (as configured in the Dashboard area);
+		// this will remove that ban—because it's deleting and resetting all IP Restrictions (i.e., IP log files) for this User's acccount in WordPress®.
+
+	"reset_file_download_access_log" => "1", // Deletes/resets any existing logs associated with past File Download Access.
+		// You would ONLY pass this in if you wanted to give this User/Member a fresh start with their access to File Downloads.
+		// This resets the User/Member stats collected and compared against your Basic File Download Restrictions.
+		// See also: `Dashboard → s2Member® → Download Options → Basic Download Restrictions`
+
+	// WARNING: Setting either of these two additional values (depending on your underlying mailing list solution);
+	// may result in the User/Member being sent an email subscription confirmation—possibly sent by your mailing list provider.
+
+	"auto_opt_out_transition" => "1", // Optional—if updating Membership Level. A non-zero value tells s2Member to attempt to process any List Server Transitions you've configured in the Dashboard area.
+		// If List Server Transitions are enabled, this will attempt to remove the User from a previous mailing (from a previous Membership Level) and add them to a new mailing list (for the new Level).
+		// If you set a non-zero value here, but the "s2member_level" does not change during modification—nothing happens.
+
+	"opt_in" => "1", // Optional. A non-zero value tells s2Member to attempt to process List Servers that you've configured in the Dashboard area.
+		// This forces an attempt to process List Servers at the current Membership Level. So this works even if Transitions are disabled in the Dashboard area.
+		// However, please note... this does NOT transition a User/Member from one list to another. It simply adds them to the mailing list they should be on.
+		// If they are already subscribed to your mailing list, setting this to a non-zero value does nothing—harmless.
+);
+
+$post_data = stream_context_create (array("http" => array("method" => "POST", "header" => "Content-type: application/x-www-form-urlencoded", "content" => "s2member_pro_remote_op=" . urlencode (serialize ($op)))));
+
+$result = trim (file_get_contents ("http://www.example.com/?s2member_pro_remote_op=1", false, $post_data));
+
+if (!empty($result) && !preg_match ("/^Error\:/i", $result) && is_array($user = @unserialize ($result)))
+	echo "Success. Modified User with ID: " . $user["ID"];
+else
+	echo "API error reads: " . $result;
+?>

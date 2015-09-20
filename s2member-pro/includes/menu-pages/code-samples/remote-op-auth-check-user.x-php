@@ -1,0 +1,22 @@
+<?php
+$op["op"] = "auth_check_user"; // The Remote Operation.
+
+$op["api_key"] = "[API Key]"; // Check your Dashboard for this value.
+	// See: `s2Member → API / Scripting → Remote Operations API → API Key`
+
+$op["data"] = array(
+	"user_login" => "johndoe22", // Required. Username to query the database for.
+	"user_pass" => "xxxxxxxxxxxxxxxx", // Required password for authentication.
+	"user_ip" => "xxx.xxx.xxx.xxx" // Optional (but highly recommended) user IP address.
+	// ↑ You should pass this to avoid invalid brute-force login protection attempts by s2Member.
+	//    In short, s2Member should know what underlying IP address is attempting authentication.
+);
+$post_data = stream_context_create (array("http" => array("method" => "POST", "header" => "Content-type: application/x-www-form-urlencoded", "content" => "s2member_pro_remote_op=" . urlencode (serialize ($op)))));
+
+$result = trim (file_get_contents ("http://www.example.com/?s2member_pro_remote_op=1", false, $post_data));
+
+if (!empty($result) && !preg_match ("/^Error\:/i", $result) && is_array($user = @unserialize ($result)))
+	echo "Successfully authenticated (i.e., Username/Password is valid). User ID: " . $user["ID"];
+else
+	echo "API error reads: " . $result;
+?>

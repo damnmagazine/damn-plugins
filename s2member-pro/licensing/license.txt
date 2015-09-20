@@ -1,0 +1,41 @@
+Copyright: © 2013 [WebSharks, Inc.](http://www.websharks-inc.com/bizdev/) (coded in the USA)
+
+= This Software is Comprised of Two Parts =
+
+1. All PHP code (and integrated HTML) in this software have been released under a [GPL license](http://www.gnu.org/licenses/gpl-3.0.html); just like WordPress® itself. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.
+2. With the exception of any Additional Acknowledgments (as detailed below); all other parts of this software; including (but not limited to) application-specific CSS/JavaScript/images, the overall design, and all support-related services and documentation; are licensed commerically and should NOT be redistributed. See: <http://www.websharks-inc.com/product/s2member/>
+
+Unless you have our prior written consent, you must NOT directly or indirectly license, sub-license, sell, resell, or provide for free; part (2) of this software; or make an offer to do any of these things. All of these things are strictly prohibited with part (2) of this software.
+
+= Credits / Additional Acknowledgments =
+
+* Software designed for WordPress®.
+	- GPL License <http://codex.wordpress.org/GPL>
+	- WordPress® <http://wordpress.org>
+* PayPal® and its associated API, buttons & services have been integrated into this software via external hyperlinks.
+  The files/services provided by PayPal® are not distributed with this software. They have their own terms & conditions.
+	- PayPal®, a 3rd party service, is powered by eBay, Inc. <http://www.paypal.com/>
+	- PayPal® is a trademark of eBay, Inc. <http://www.ebay.com/>
+* The W3C® and its associated validator & services have been integrated into this software via external hyperlinks.
+  The files/services provided by the W3C® are not distributed with this software. They have their own terms & conditions.
+	- The W3C®, a 3rd party service, is powered by the World Wide Web Consortium <http://validator.w3.org/>
+	- W3C® is a trademark of the World Wide Web Consortium. <http://www.w3.org/>
+* Arrow Icon by Pixel Mixer <http://pixelmixer.ru/>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/49360/64/arrow_down_download_icon>
+* Details Icon by the Tango Project <http://tango.freedesktop.org/The_People>
+	- via IconFinder <http://www.iconfinder.com/icondetails/15286/32/center_file_format_justify_paper_icon>
+* Wallet Icon by Mischa McLachlan <http://www.zyotism.com/aesthetics>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/27666/128/credit_cards_money_wallet_icon>
+* Tax Icon by PC.DE Team <http://pc.de/icons/>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/48662/32/cost_price_icon>
+* Street Address / Map Icon by Jason LaRose <http://jasonlarose.com/>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/47461/32/map_icon>
+* Info Icon / Lock Icon by IconFinder <http://www.iconfinder.net/>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/51922/128/info_icon>
+		<http://www.iconfinder.com/icondetails/51925/128/lock_safe_secure_icon>
+* Error Icon by FatCow Web Hosting <http://www.fatcow.com/>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/36026/32/error_icon>
+* Credit Card Icons by The Web Design Blog <http://www.thewebdesignblog.co.uk/>
+	- via IconFinder: <http://www.iconfinder.com/search/?q=iconset%3Acreditcarddebitcard>
+* Coupon Code Icon by The Gnome Project <http://art.gnome.org/themes/icon>
+	- via IconFinder: <http://www.iconfinder.com/icondetails/22110/32/emblem_sales_icon>

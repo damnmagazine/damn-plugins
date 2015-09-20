@@ -1,0 +1,21 @@
+<?php
+$op["op"] = "delete_user"; // The Remote Operation you're calling upon.
+
+$op["api_key"] = "[API Key]"; // Check your Dashboard for this value.
+	// See: `s2Member → API / Scripting → Remote Operations API → API Key`
+
+$op["data"] = array(
+	// You must supply one of these values.
+	"user_id" => "123", // A WordPress® User ID.
+	"user_login" => "johndoe22", // A Username instead of the WordPress® User ID.
+);
+
+$post_data = stream_context_create (array("http" => array("method" => "POST", "header" => "Content-type: application/x-www-form-urlencoded", "content" => "s2member_pro_remote_op=" . urlencode (serialize ($op)))));
+
+$result = trim (file_get_contents ("http://www.example.com/?s2member_pro_remote_op=1", false, $post_data));
+
+if (!empty($result) && !preg_match ("/^Error\:/i", $result) && is_array($user = @unserialize ($result)))
+	echo "Success. Deleted User with ID: " . $user["ID"];
+else
+	echo "API error reads: " . $result;
+?>
