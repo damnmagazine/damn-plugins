@@ -1,0 +1,84 @@
+.dataTables_paginate{
+    padding-top: 5px;
+}
+.paginate_button{
+    margin-left: 5px;
+    border: 1px solid #000000;
+    padding: 2px;
+}
+.paginate_active{
+    margin-left: 5px;
+    border: 1px solid #000000;
+    padding: 2px;
+    background: #2BB0D7;
+}
+.navdiv{
+    height: 95px;
+    width: 400px;
+}
+.option_img{
+    width: 85px;
+    height: 90px;
+    padding: 2px;
+    border: 1px solid #000000;
+    margin-right: 10px;
+    position: relative;
+    float: left;
+    text-align: center;
+    background: #F5FFF2;
+}
+.option_img:hover{
+    background: #D7EBD1;
+}
+
+.disabled_but{
+    background: #ABABAB;
+}
+.disabled_but:hover{
+    background: #ABABAB;
+}
+.infodiv_fbstream{
+    border-radius: 3px;
+    border: 1px solid #343477;
+    background: #343477;
+    color:#fff;
+    padding: 0px;
+    margin-bottom: 5px;
+    height: 100%;
+}
+.infodiv_fbstream p{
+    padding: 10px;
+    color:#fff;
+}
+.infodiv_fbstream h2{
+    font-size: 1.5em;
+    margin-top: 0px;
+    font-weight: 400;
+    display: block;
+    height: 25px;
+    padding: 5px;
+    vertical-align: middle;
+    background-color: #09093B !important;
+    color: #fff;
+}
+.infodiv_fbstream h3{
+    color: #fff;
+}
+
+.infodiv_fbstream a {
+  color: #B7B7E6;
+  text-decoration: none;
+}
+.fbstream_fullfield{
+    width:100%
+}
+.my_shortcode{
+    font-size: 17px;
+    color: #FFE5E3;
+}
+#shortcode_text_area{
+    padding:15px;
+    width:95%;
+    height: 80px;
+    border: 1px dashed #000;    
+}

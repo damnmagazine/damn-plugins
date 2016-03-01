@@ -1,0 +1,144 @@
+.facebook-stream-container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    font: 12px/18px Arial, sans-serif;
+    color: #333;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%
+}
+
+.facebook-stream-container-img {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    height: auto;
+}
+/* White theme */
+.facebook-stream-white-panel a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+    border: 0px !important;
+}
+
+.facebook-stream-white-panel {
+    position: absolute;
+    background: white;
+    border: 1px solid #FAFAFA;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    opacity: 1;
+}
+.facebook-stream-white-panel:hover {
+    border: 1px solid #FAFAFA;
+    box-shadow: 1px 1px 10px rgba(34, 25, 25, 0.4);
+    margin-top: -2px;
+}
+.facebook-stream-white-panel h1 {
+    font-size: 14px !important;
+    text-decoration: none !important;
+    line-height: 20px !important;
+}
+.facebook-stream-white-panel p {
+    line-height: 20px !important;
+}
+.facebook-stream-white-panel h1 a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+}
+.facebook-stream-white-panel h1 a:hover {
+    color: #B03333 !important;
+    text-decoration: none !important;
+}
+
+#facebook-stream-white-panel:not(:hover) {
+    opacity: 0.4 !important;
+}
+
+/* Dark theme */
+.facebook-stream-dark-panel a {
+    color: #3384B0 !important;
+    text-decoration: none !important;
+    border: 0px !important;
+}
+.facebook-stream-container-img-dark {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #DBDBDB;
+    height: auto;
+}
+.facebook-stream-dark-panel {
+    position: absolute;
+    background: #212121;
+    color: #F0F0F0 !important;
+    border: 1px solid #000;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    opacity: 1;
+}
+.facebook-stream-dark-panel:hover {
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px rgba(34, 25, 25, 0.4);;
+    margin-top: -2px;
+}
+.facebook-stream-dark-panel h1 {
+    font-size: 14px !important;
+    text-decoration: none !important;
+    line-height: 20px !important;
+}
+.facebook-stream-dark-panel p {
+    line-height: 20px !important;
+}
+.facebook-stream-dark-panel h1 a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.facebook-stream-dark-panel h1 a:hover {
+    color: #E6E6E6 !important;
+    text-decoration: none !important;
+}
+
+#facebook-stream-dark-panel:not(:hover) {
+    opacity: 0.4 !important;
+}
+/* end dark */
+
+
+.facebook-stream-small-icon{
+    display: inline !important;  
+}
+.facebook-stream-footer{
+    font-size: 90% !important;
+}
+
+
+.comment_fsl{
+    width: 100%;
+    display: inline-block;
+    padding: 2px;
+}
+.comment_fsl:hover{
+    background: #E6F3F5;
+}
+.comment_img_fsl{
+    width: 50px !important;
+    border: 1px solid #BABABA;
+    display: block;
+    float: left;
+}
+.comment_img_fsl img{
+    width: 50px !important;
+}
+.comment_text_fsl{
+    font: 12px sans-serif !important;
+    color: #000 !important;
+    display: block;
+    margin-left: 60px;
+}
