@@ -9,7 +9,7 @@ Required 3rd party, non-repo plugins for DAMN:
 
 
 ### Deployment
-The plugin folder should only consist of stable, 3rd party plugins.
+The plugin folder should only consist of stable, 3rd party plugins and nothing else.Take care.
 Therefore, deployment can be safely executed as simple update (no releases- or atomic structure).
 
 ### Symlinks
